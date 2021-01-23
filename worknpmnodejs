@@ -1,0 +1,25 @@
+# день убил на эту хрень
+# привязывал gatsby + contentful 
+# начало уже не помню по этому начну с удаления
+sudo apt-get remove nodejs
+sudo apt-get remove npm
+
+# установка
+sudo apt install npm
+# не забиваем обновлятся
+sudo apt update
+
+npm install --legacy-peer-deps
+
+npm run setup
+
+npm config delete prefix
+npm config set prefix /usr/local
+sudo npm i -g gatsby-cli
+
+# проверим версию 
+gatsby --version
+# запускаем локально
+sudo gatsby develop
+# запускаем на сервер
+sudo gatsby build
